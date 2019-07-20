@@ -14,12 +14,8 @@ export class LoginComponent implements OnInit {
   status
   ngOnInit() {
   }
-  Login(evt){
-    let user=document.querySelector('.email');
-    let password=document.querySelector('.password');
-    console.log(user.value);
-    console.log(password.value)
-    this.authenticate.validate(user.value,password.value);
+  Login(user,password){
+      this.authenticate.validate(user,password);
     this.authenticate.currentLoginStatus.subscribe(res=>{
       this.status=res;
       this.resultStatus(this.status)
@@ -33,8 +29,6 @@ export class LoginComponent implements OnInit {
 
     }
     else{
-      document.querySelector('.email').value='';
-      document.querySelector('.password').value='';
       document.querySelector('.error').innerHTML='Wrong Credentials'
     }
   }
