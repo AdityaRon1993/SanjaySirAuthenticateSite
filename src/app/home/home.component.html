@@ -1,0 +1,29 @@
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Employee ID
+        </th>
+        <th>
+            Designation
+        </th>
+        <th>
+            Location
+        </th>
+        <th>
+            Edit/Delete
+        </th>
+    </tr>
+    <tr *ngFor='let employee of employeeDetails'>
+        <td>{{employee.Name}}</td>
+        <td>{{employee.id}}</td>
+        <td>{{employee.designation}}</td>
+        <td>{{employee.location}}</td>
+        <td>
+            <button class="btn btn-light" id="{{employee.id}}" (click)='edit($event)'>&#9998;</button>
+            <button class="btn btn-light" id="{{employee.id}}" (click)='delete($event)'><i class="fa fa-trash-o"></i></button>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,52 @@
+.header {
+    position: relative;
+}
+
+.selection {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+.hide {
+    /* display: none; */
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.show {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.content {
+    padding: 10px;
+    transition: transform 0.3s ease-in
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-light {
+    position: relative;
+    width: 170px
+}
+
+.heading {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    color: rgba(37, 37, 37, 0.699);
+    transition: transform 0.4s ease-in-out
+}
+
+.rotate {
+    transform: rotate(45deg)
+}
+
+.mainContent {
+    margin-top: 50px;
+}
